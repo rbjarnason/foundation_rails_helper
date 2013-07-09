@@ -105,7 +105,7 @@ module FoundationRailsHelper
 
     def field(attribute, options, &block)
       html = ''.html_safe
-      html = custom_label(attribute, options[:label], options[:label_options]) if false != options[:label]
+      html = custom_label(attribute, options[:label], options[:label_options]) if false #!= options[:label]
       options[:class] ||= "medium"
       options[:class] = "#{options[:class]} input-text"
       options[:class] += " error" if has_error?(attribute)
